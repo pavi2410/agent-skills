@@ -8,6 +8,21 @@ These skills are deliberately not technology-specific. They apply across general
 languages (Rust, TypeScript, Python, Kotlin, Go, Java, C++, etc.) and across stack
 choices.
 
+## Installation
+
+Install all skills in this collection into your project with a single command:
+
+```sh
+npx skills add pavi2410/agent-skills
+```
+
+Or install individual skills:
+
+```sh
+npx skills add pavi2410/agent-skills --skill intent-encoding
+npx skills add pavi2410/agent-skills --skill architecture-decisions
+```
+
 ## Available skills
 
 ### intent-encoding
