@@ -13,14 +13,14 @@ choices.
 Install all skills in this collection into your project with a single command:
 
 ```sh
-npx skills install pavi2410/agent-skills
+npx skills add pavi2410/agent-skills
 ```
 
 Or install individual skills:
 
 ```sh
-npx skills install pavi2410/agent-skills/intent-encoding
-npx skills install pavi2410/agent-skills/architecture-decisions
+npx skills add pavi2410/agent-skills --skill intent-encoding
+npx skills add pavi2410/agent-skills --skill architecture-decisions
 ```
 
 ## Available skills
