@@ -50,6 +50,32 @@ and the index/lineage discipline that keeps the system from rotting as decisions
 - General documentation tasks (READMEs, guides, API docs)
 - Speculative proposals not yet decided (use a design doc or RFC)
 
+### ask-for-help
+
+Recognize when the agent is stuck — looping, blocked by missing access, or working
+on genuinely ambiguous intent — and ask the human a structured, useful question
+instead of grinding. Distinguishes real stuck-ness (multiple concrete signals) from
+first-contact friction. Strongly biased against premature escalation as well as
+against silent looping.
+
+**Use when:**
+
+- The same action has failed two or more times with the same or near-identical error
+- An interactive terminal, TUI, REPL, or browser flow is unresponsive to the inputs
+  you can send
+- The next step requires authentication, credentials, or external resources you
+  don't have
+- The user's intent is genuinely ambiguous in a way that changes the approach
+  materially
+- You notice yourself about to retry-with-a-tweak for the third time
+
+**Skips:**
+
+- First failures (diagnose and retry once before escalating)
+- Stylistic decisions the user has implicitly delegated
+- Long-running tasks that are still making progress
+- Confirmation of routine actions already authorized in session or `CLAUDE.md`
+
 ## Relationship between the skills
 
 The two skills are complementary, not overlapping:
@@ -71,6 +97,10 @@ The two skills are complementary, not overlapping:
 
 Each skill points to the other when its scope ends. Code-resident annotations link to
 ADRs; ADRs reference the code they affect.
+
+`ask-for-help` is orthogonal to the two skills above. It governs *when the agent
+stops and consults the human* — independent of which artifact-type skill (if any)
+is in use during the work.
 
 ## Skill structure
 
